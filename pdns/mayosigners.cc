@@ -4,8 +4,8 @@ extern "C"
 #include "config.h"
 #endif
 #define MAYO_VARIANT MAYO_2
-#define MAYO_BUILD_TYPE_OPT
 #define ENABLE_PARAMS_DYNAMIC
+#include <patad-testbed/mayo-build-type.h>
 #include <patad-testbed/mayo.h>
 }
 #include "dnssecinfra.hh"
