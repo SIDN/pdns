@@ -431,6 +431,18 @@ testrunner_SOURCES += \
 testrunner_LDADD += $(LIBSODIUM_LIBS)
 endif
 
+if LIBFALCON
+pdns_recursor_SOURCES += \
+	falconsigners.cc
+pdns_recursor_LDADD += $(LIBFALCON_LIBS)
+
+rec_control_LDADD += $(LIBFALCON_LIBS)
+
+testrunner_SOURCES += \
+	falconsigners.cc
+testrunner_LDADD += $(LIBFALCON_LIBS)
+endif
+
 
 
 if LIBDECAF

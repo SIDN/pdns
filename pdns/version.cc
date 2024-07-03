@@ -101,6 +101,9 @@ void showBuildConfiguration()
 #ifdef HAVE_LIBCRYPTO_ED448
     "libcrypto-ed448 " <<
 #endif
+#ifdef HAVE_FALCON
+    "falcon512 " <<
+#endif
 #ifdef HAVE_LIBCRYPTO_EDDSA
     "libcrypto-eddsa " <<
 #endif

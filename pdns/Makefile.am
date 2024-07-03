@@ -318,6 +318,11 @@ pdns_server_SOURCES += sodiumsigners.cc
 pdns_server_LDADD += $(LIBSODIUM_LIBS)
 endif
 
+if LIBFALCON
+pdns_server_SOURCES += falconsigners.cc
+pdns_server_LDADD += $(LIBFALCON_LIBS)
+endif
+
 if LIBDECAF
 pdns_server_SOURCES += decafsigners.cc
 pdns_server_LDADD += $(LIBDECAF_LIBS)
@@ -423,6 +428,11 @@ pdnsutil_LDADD = \
 if LIBSODIUM
 pdnsutil_SOURCES += sodiumsigners.cc
 pdnsutil_LDADD += $(LIBSODIUM_LIBS)
+endif
+
+if LIBFALCON
+pdnsutil_SOURCES += falconsigners.cc
+pdnsutil_LDADD += $(LIBFALCON_LIBS)
 endif
 
 if LIBDECAF
@@ -1482,6 +1492,12 @@ if LIBSODIUM
 testrunner_SOURCES += sodiumsigners.cc
 testrunner_LDADD += $(LIBSODIUM_LIBS)
 speedtest_LDADD += $(LIBSODIUM_LIBS)
+endif
+
+if LIBFALCON
+testrunner_SOURCES += falconsigners.cc
+pdnsutil_LDADD += $(LIBFALCON_LIBS)
+speedtest_LDADD += $(LIBFALCON_LIBS)
 endif
 
 if LIBDECAF
