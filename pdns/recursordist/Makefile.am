@@ -443,6 +443,18 @@ testrunner_SOURCES += \
 testrunner_LDADD += $(LIBFALCON_LIBS)
 endif
 
+if LIBSQISIGN
+pdns_recursor_SOURCES += \
+	sqisignsigners.cc
+pdns_recursor_LDADD += $(LIBSQISIGN_LIBS)
+
+rec_control_LDADD += $(LIBSQISIGN_LIBS)
+
+testrunner_SOURCES += \
+	sqisignsigners.cc
+testrunner_LDADD += $(LIBSQISIGN_LIBS)
+endif
+
 
 
 if LIBDECAF

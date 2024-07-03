@@ -323,6 +323,11 @@ pdns_server_SOURCES += falconsigners.cc
 pdns_server_LDADD += $(LIBFALCON_LIBS)
 endif
 
+if LIBSQISIGN
+pdns_server_SOURCES += sqisignsigners.cc
+pdns_server_LDADD += $(LIBSQISIGN_LIBS)
+endif
+
 if LIBDECAF
 pdns_server_SOURCES += decafsigners.cc
 pdns_server_LDADD += $(LIBDECAF_LIBS)
@@ -433,6 +438,11 @@ endif
 if LIBFALCON
 pdnsutil_SOURCES += falconsigners.cc
 pdnsutil_LDADD += $(LIBFALCON_LIBS)
+endif
+
+if LIBSQISIGN
+pdnsutil_SOURCES += sqisignsigners.cc
+pdnsutil_LDADD += $(LIBSQISIGN_LIBS)
 endif
 
 if LIBDECAF
@@ -1498,6 +1508,12 @@ if LIBFALCON
 testrunner_SOURCES += falconsigners.cc
 pdnsutil_LDADD += $(LIBFALCON_LIBS)
 speedtest_LDADD += $(LIBFALCON_LIBS)
+endif
+
+if LIBSQISIGN
+testrunner_SOURCES += sqisignsigners.cc
+testrunner_LDADD += $(LIBSQISIGN_LIBS)
+speedtest_LDADD += $(LIBSQISIGN_LIBS)
 endif
 
 if LIBDECAF

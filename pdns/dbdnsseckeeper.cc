@@ -98,6 +98,8 @@ bool DNSSECKeeper::addKey(const DNSName& name, bool setSEPBit, int algorithm, in
         bits = 384;
       else if(algorithm == DNSSECKeeper::ED448)
         bits = 456;
+      else if(algorithm == DNSSECKeeper::SQISIGN1)
+        bits = 782*8;
       else if(algorithm == DNSSECKeeper::FALCON512)
         bits = 1281*8;
       else {

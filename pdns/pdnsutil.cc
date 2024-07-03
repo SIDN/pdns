@@ -2566,6 +2566,9 @@ try
 #ifdef HAVE_FALCON
     cout<<"|falcon512";
 #endif
+#ifdef HAVE_SQISIGN
+    cout<<"|sqisign1";
+#endif
     cout << "]" << endl;
     cout << "                                   Add a ZSK or KSK to zone and specify algo&bits" << endl;
     cout << "backend-cmd BACKEND CMD [CMD..]    Perform one or more backend commands" << endl;
@@ -3029,6 +3032,9 @@ try
 #endif
 #if HAVE_FALCON
       cerr << "|falcon512";
+#endif
+#if HAVE_SQISIGN
+      cerr << "|sqisign1";
 #endif
       cerr << "]"<<endl;
       cerr << endl;
@@ -3681,6 +3687,9 @@ try
 #ifdef HAVE_FALCON
       cerr << "|falcon512";
 #endif
+#ifdef HAVE_SQISIGN
+      cerr << "|sqisign1";
+#endif
       cerr << "] [bits]"<<endl;
       return 0;
     }
@@ -3721,6 +3730,8 @@ try
           bits = 456;
         else if(algorithm == DNSSECKeeper::FALCON512)
           bits = 1281*8;
+        else if(algorithm == DNSSECKeeper::SQISIGN1)
+          bits = 782*8;
         else {
           throw runtime_error("Can not guess key size for algorithm "+std::to_string(algorithm));
         }

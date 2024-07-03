@@ -438,6 +438,8 @@ void DNSCryptoKeyEngine::testMakers(unsigned int algo, maker_t* creator, maker_t
     bits = 384;
   else if(algo == DNSSECKeeper::ED448)
     bits = 456;
+  else if(algo == DNSSECKeeper::SQISIGN1)
+    bits = 782*8;
   else if(algo == DNSSECKeeper::FALCON512)
     bits = 1281*8;
   else

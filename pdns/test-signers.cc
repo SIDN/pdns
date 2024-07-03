@@ -477,6 +477,8 @@ BOOST_FIXTURE_TEST_CASE(test_generic_signers, Fixture)
   }
 }
 
+// XXX SQISign-1 test
+
 // XXX Falcon-512 test
 
 // NOLINTNEXTLINE(cppcoreguidelines-avoid-non-const-global-variables,readability-identifier-length): Boost stuff.
