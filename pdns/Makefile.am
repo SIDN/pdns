@@ -323,6 +323,11 @@ pdns_server_SOURCES += falconsigners.cc
 pdns_server_LDADD += $(LIBFALCON_LIBS)
 endif
 
+if LIBMAYO
+pdns_server_SOURCES += mayosigners.cc
+pdns_server_LDADD += $(LIBMAYO_LIBS)
+endif
+
 if LIBSQISIGN
 pdns_server_SOURCES += sqisignsigners.cc
 pdns_server_LDADD += $(LIBSQISIGN_LIBS)
@@ -438,6 +443,11 @@ endif
 if LIBFALCON
 pdnsutil_SOURCES += falconsigners.cc
 pdnsutil_LDADD += $(LIBFALCON_LIBS)
+endif
+
+if LIBMAYO
+pdnsutil_SOURCES += mayosigners.cc
+pdnsutil_LDADD += $(LIBMAYO_LIBS)
 endif
 
 if LIBSQISIGN
@@ -1508,6 +1518,12 @@ if LIBFALCON
 testrunner_SOURCES += falconsigners.cc
 pdnsutil_LDADD += $(LIBFALCON_LIBS)
 speedtest_LDADD += $(LIBFALCON_LIBS)
+endif
+
+if LIBMAYO
+testrunner_SOURCES += mayosigners.cc
+testrunner_LDADD += $(LIBMAYO_LIBS)
+speedtest_LDADD += $(LIBMAYO_LIBS)
 endif
 
 if LIBSQISIGN

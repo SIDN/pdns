@@ -54,6 +54,7 @@ public:
     ECDSA384=14,
     ED25519=15,
     ED448=16,
+    MAYO2=249,
     SQISIGN1=250,
     FALCON512=251,
   };
@@ -113,6 +114,7 @@ public:
     if (pdns_iequals(algorithm, "ecdsap384sha384")) return ECDSA384;
     if (pdns_iequals(algorithm, "ed25519")) return ED25519;
     if (pdns_iequals(algorithm, "ed448")) return ED448;
+    if (pdns_iequals(algorithm, "mayo2")) return MAYO2;
     if (pdns_iequals(algorithm, "sqisign1")) return SQISIGN1;
     if (pdns_iequals(algorithm, "falcon512")) return FALCON512;
     if (pdns_iequals(algorithm, "indirect")) return 252;
@@ -157,6 +159,8 @@ public:
         return "ED25519";
       case ED448:
         return "ED448";
+      case MAYO2:
+        return "MAYO2";
       case SQISIGN1:
         return "SQISIGN1";
       case FALCON512:

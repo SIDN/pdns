@@ -107,6 +107,9 @@ void showBuildConfiguration()
 #ifdef HAVE_FALCON
     "falcon512 " <<
 #endif
+#ifdef HAVE_MAYO
+    "mayo2 " <<
+#endif
 #ifdef HAVE_LIBCRYPTO_EDDSA
     "libcrypto-eddsa " <<
 #endif

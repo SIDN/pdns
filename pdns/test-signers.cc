@@ -477,6 +477,8 @@ BOOST_FIXTURE_TEST_CASE(test_generic_signers, Fixture)
   }
 }
 
+// XXX MAYO-2 test
+
 // XXX SQISign-1 test
 
 // XXX Falcon-512 test

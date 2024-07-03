@@ -2566,6 +2566,9 @@ try
 #ifdef HAVE_FALCON
     cout<<"|falcon512";
 #endif
+#ifdef HAVE_MAYO
+    cout<<"|mayo2";
+#endif
 #ifdef HAVE_SQISIGN
     cout<<"|sqisign1";
 #endif
@@ -3032,6 +3035,9 @@ try
 #endif
 #if HAVE_FALCON
       cerr << "|falcon512";
+#endif
+#if HAVE_MAYO
+      cerr << "|mayo2";
 #endif
 #if HAVE_SQISIGN
       cerr << "|sqisign1";
@@ -3687,6 +3693,9 @@ try
 #ifdef HAVE_FALCON
       cerr << "|falcon512";
 #endif
+#ifdef HAVE_MAYO
+      cerr << "|mayo2";
+#endif
 #ifdef HAVE_SQISIGN
       cerr << "|sqisign1";
 #endif
@@ -3730,6 +3739,8 @@ try
           bits = 456;
         else if(algorithm == DNSSECKeeper::FALCON512)
           bits = 1281*8;
+        else if(algorithm == DNSSECKeeper::MAYO2)
+          bits = 24*8;
         else if(algorithm == DNSSECKeeper::SQISIGN1)
           bits = 782*8;
         else {

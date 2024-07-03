@@ -3027,6 +3027,11 @@ static void handleRuntimeDefaults(Logr::log_t log)
   if (::arg().asNum("stack-size") == 200000) { // the default in table.py
     ::arg().set("stack-size", "stack size per mthread") = "600000";
   }
+#elif defined(HAVE_MAYO)
+  // MAYO needs more stack
+  if (::arg().asNum("stack-size") == 200000) { // the default in table.py
+    ::arg().set("stack-size", "stack size per mthread") = "300000";
+  }
 #endif
 
   const string RUNTIME = "*runtime determined*";
