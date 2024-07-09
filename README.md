@@ -15,6 +15,10 @@ https://github.com/PowerDNS/pdns/issues
 
 But please check if the issue is already reported there first.
 
+SIDN Labs' PQC DNSSEC Patches
+-----------------------------
+See [BUILDING-PQC.md](BUILDING-PQC.md) for build instructions on how to build our PQC DNSSEC-enabled PowerDNS.
+
 DOCKER
 ------
 
