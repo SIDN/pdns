@@ -18,6 +18,7 @@ But please check if the issue is already reported there first.
 SIDN Labs' PQC DNSSEC Patches
 -----------------------------
 See [BUILDING-PQC.md](BUILDING-PQC.md) for build instructions on how to build our PQC DNSSEC-enabled PowerDNS.
+More information about this project can be found in our blogs ([introduction blog](https://www.sidnlabs.nl/en/news-and-blogs/a-quantum-safe-cryptography-dnssec-testbed), and [the follow-up blog](https://www.sidnlabs.nl/en/news-and-blogs/set-up-your-own-pqc-testbed-for-dnssec-with-the-patad-open-source-software) about this testbed) and on the [website](https://patad.sidnlabs.nl/) of the PATAD project.
 
 DOCKER
 ------

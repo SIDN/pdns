@@ -3,7 +3,7 @@
 This document describes how to build our patched PowerDNS and the libraries that it depends on.
 After following these steps, you'll have a PowerDNS Recursor and PowerDNS Authoritative that support Falcon (the 512-bit variant), MAYO (parameter set 2), and SQISign (parameter set NIST-I).
 Instead of following these steps, you can also use Docker containers and other tools provided by us to bring up a PQC DNSSEC testbed.
-Read more about this work [here](https://patad.sidnlabs.nl/).
+More information about this project can be found in our blogs ([introduction blog](https://www.sidnlabs.nl/en/news-and-blogs/a-quantum-safe-cryptography-dnssec-testbed), and [the follow-up blog](https://www.sidnlabs.nl/en/news-and-blogs/set-up-your-own-pqc-testbed-for-dnssec-with-the-patad-open-source-software) about this testbed) and on the [website](https://patad.sidnlabs.nl/) of the PATAD project.
 
 ## 1. Clone repositories
 
